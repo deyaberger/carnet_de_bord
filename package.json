@@ -1,0 +1,10 @@
+{
+  "name": "carnet_de_bord",
+  "version": "1.0.0",
+  "description": "Un carnet quotidien personnel, en français et hors ligne.",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
