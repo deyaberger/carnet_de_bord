@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#426854">
+    <meta name="description" content="Votre carnet quotidien : repas, humeur, activités et bien-être. Privé et disponible hors ligne.">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Carnet de bord · Mon quotidien</title>
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Carnet de bord, accueil"><img src="./icon.svg" alt="" width="38" height="38"><span>Carnet de bord<small>Un peu de vous, chaque jour.</small></span></a>
+      <button id="install" class="outline" hidden>Installer l’application</button>
+      <span class="private-label">◈ &nbsp; Votre espace personnel</span>
+    </header>
+    <main>
+      <section class="welcome">
+        <p class="eyebrow">MON QUOTIDIEN</p>
+        <h1>Chaque jour compte.</h1>
+        <p>Un endroit pour noter, ressentir et prendre soin de vous.<br>Sans jugement, à votre rythme.</p>
+      </section>
+      <div class="workspace">
+        <aside>
+          <section class="calendar card" aria-label="Calendrier">
+            <div class="calendar-heading">
+              <h2 id="month-title"></h2>
+              <div class="arrows"><button id="previous-month" aria-label="Mois précédent">‹</button><button id="next-month" aria-label="Mois suivant">›</button></div>
+            </div>
+            <button id="today" class="today-button">Revenir à aujourd’hui</button>
+            <div class="weekdays" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+            <div id="days" class="days"></div>
+            <div class="legend"><span><i class="entry-dot"></i> Journée renseignée</span><span><i class="today-dot"></i> Aujourd’hui</span></div>
+          </section>
+          <section class="gentle-note"><span aria-hidden="true">✧</span><h3>Les petits détails font les grands jours.</h3><p>Pas besoin de tout remplir. Quelques mots, une humeur, un moment… c’est déjà bien.</p></section>
+          <p class="privacy-note">◈ &nbsp; Vos notes restent sur cet appareil.<br>Aucun compte, aucun envoi de données.<br>Évitez les appareils partagés.</p>
+          <p id="offline-status" class="privacy-note" role="status"></p>
+        </aside>
+        <section class="journal card" aria-labelledby="day-title">
+          <div class="journal-heading"><div><p class="eyebrow" id="day-relative"></p><h2 id="day-title"></h2></div><span class="day-badge" aria-hidden="true">✎</span></div>
+          <div class="journal-subheading"><p>Comment s’est passée votre journée ?</p><span id="save-status" role="status" aria-live="polite"></span></div>
+          <p id="storage-warning" class="warning" role="alert" hidden></p>
+          <form id="journal-form" autocomplete="off"></form>
+          <div class="journal-footer"><span>Chaque détail est facultatif.</span><button id="delete-day" class="delete-button" type="button">Effacer cette journée</button></div>
+        </section>
+      </div>
+      <footer class="page-footer">Votre quotidien, simplement. <span aria-hidden="true">✧</span></footer>
+    </main>
+    <noscript>Activez JavaScript pour utiliser le calendrier et enregistrer vos journées.</noscript>
+  </body>
+</html>
