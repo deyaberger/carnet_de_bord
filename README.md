@@ -15,8 +15,9 @@ Pas de dépendances ni de compilation. Depuis la racine du dépôt :
 python3 -m http.server 8000
 ```
 
-Ouvrez <http://localhost:8000>. Chaque push sur `main` publie ces fichiers
-statiques sur GitHub Pages via le workflow du dépôt. Les chemins relatifs
+Ouvrez <http://localhost:8000>. Après avoir activé GitHub Pages dans
+`Settings → Pages` en choisissant `GitHub Actions` comme source, chaque push
+sur `main` publie ces fichiers via le workflow du dépôt. Les chemins relatifs
 permettent aussi un hébergement dans un sous-répertoire.
 
 ## Installer et utiliser hors ligne
